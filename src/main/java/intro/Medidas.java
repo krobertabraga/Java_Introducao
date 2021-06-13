@@ -9,13 +9,37 @@ public class Medidas {
 
     // 3.2 - Métodos e Funções
     public static void main(String[] args){
+        // Condicional = verificar uma condição - fazer yma pergunta para uma pessoa, hardware ou software
 
+        // Switch - selecionar o comportamento do programa conforme a escolha da pessoa ou do softare.
+
+        String opcao = "nada";
+        switch (opcao){
+            case "ifsimples":
+                System.out.println("Você escolheu executar o método if simples");
+                ifSimpes();
+                break;
+            case "curto":
+                System.out.println("Você escolheu executar o método Calcular Area Modo Compacto");
+                calcularAreaModoCompacto();
+                break;
+            case "extenso":
+                System.out.println("Você escolheu executar o método Calcular Area Modo Extenso");
+                calcularAreaModoExtenso();
+                break;
+            default:
+                System.out.println("Você escolheu uma opção que não tem uma ação associada");
+                calcularAreaModoCompacto();
+                break;
+        }
+         }
+    public static void ifSimpes(){
         // Condicional = verificar uma condição - fazer yma pergunta para uma pessoa, hardware ou software
 
         // if = se
         // else = senão
 
-        String modo = "externso";
+        String modo = "curto";
 
         if ( modo == "curto"){
             calcularAreaModoCompacto();
@@ -24,7 +48,6 @@ public class Medidas {
             calcularAreaModoExtenso();
         }
     }
-
     public static void calcularAreaModoCompacto(){
         System.out.println("Calcular Area Modo Compacto");
         // Calcula de área - Reduzido
