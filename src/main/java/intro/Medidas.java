@@ -9,9 +9,22 @@ public class Medidas {
 
     // 3.2 - Métodos e Funções
     public static void main(String[] args){
-    calcularAreaModoCompacto();
-    calcularAreaModoExtenso();
+
+        // Condicional = verificar uma condição - fazer yma pergunta para uma pessoa, hardware ou software
+
+        // if = se
+        // else = senão
+
+        String modo = "externso";
+
+        if ( modo == "curto"){
+            calcularAreaModoCompacto();
+        }
+        else {
+            calcularAreaModoExtenso();
+        }
     }
+
     public static void calcularAreaModoCompacto(){
         System.out.println("Calcular Area Modo Compacto");
         // Calcula de área - Reduzido
