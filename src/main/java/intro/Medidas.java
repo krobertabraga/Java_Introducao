@@ -10,7 +10,7 @@ public class Medidas {
     // 3.1 - Atributos - Caracteristicas
 
     // 3.2 - Métodos e Funções
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // Condicional = verificar uma condição - fazer yma pergunta para uma pessoa, hardware ou software
 
         // Utilizar classe Scanner do Java para  ler a escolha do usário no console
@@ -19,14 +19,15 @@ public class Medidas {
         System.out.println("c - Calcular area modo curto");
         System.out.println("e - Calcular area modo exterso");
         System.out.println("i - Calcular area modo if curto");
+        System.out.println("D - Contar até 10");
+        System.out.println("R - Contagem regressiva de 10 até 0");
         System.out.println("Digite a opção desejada!");
         String opcao = scanner.next();
 
-
         // Switch - selecionar o comportamento do programa conforme a escolha da pessoa ou do softare.
 
-       // String opcao = "nada";
-        switch (opcao){
+        // String opcao = "nada";
+        switch (opcao) {
             case "i":
             case "I":
                 System.out.println("Você escolheu executar o método if simples");
@@ -42,12 +43,23 @@ public class Medidas {
                 System.out.println("Você escolheu executar o método Calcular Area Modo Extenso");
                 calcularAreaModoExtenso();
                 break;
+            case "d":
+            case "D":
+                System.out.println("Você escolheu executar o método Contar até 10");
+                contarAteDez();
+                break;
+            case "r":
+            case "R":
+                System.out.println("Você escolheu executar o método Contagem Regressiva");
+                contagemRegressiva();
+                break;
             default:
                 System.out.println("Você escolheu uma opção que não tem uma ação associada");
                 calcularAreaModoCompacto();
         }
-         }
-    public static void ifSimpes(){
+    }
+
+    public static void ifSimpes() {
         // Condicional = verificar uma condição - fazer yma pergunta para uma pessoa, hardware ou software
 
         // if = se
@@ -55,14 +67,14 @@ public class Medidas {
 
         String modo = "curto";
 
-        if ( modo == "curto"){
+        if (modo == "curto") {
             calcularAreaModoCompacto();
-        }
-        else {
+        } else {
             calcularAreaModoExtenso();
         }
     }
-    public static void calcularAreaModoCompacto(){
+
+    public static void calcularAreaModoCompacto() {
         System.out.println("Calcular Area Modo Compacto");
         // Calcula de área - Reduzido
         int largura = 4;
@@ -71,7 +83,8 @@ public class Medidas {
         System.out.println("Para a largura de " + largura + "m e o comprimento de "
                 + comprimento + "m a área é de " + largura * comprimento + "m²");
     }
-    public static void calcularAreaModoExtenso(){
+
+    public static void calcularAreaModoExtenso() {
         System.out.println("Calcular Area Modo Extenso");
         // Calculo de área - Exemplo: o tamanho do tapete ou do piso
         int largura;
@@ -84,5 +97,21 @@ public class Medidas {
         resultado = largura * comprimento;
         System.out.println("Para a largura de " + largura + "m e o comprimento de "
                 + comprimento + "m a área é de " + resultado + "m²");
+    }
+
+    public static void contarAteDez() {
+
+        //Loops ou Repetições
+        // for = é uma repetição incondicional
+
+        for (int numero = 1; numero <= 10; numero++) {
+            System.out.println(numero);
+        }
+    }
+
+    public static void contagemRegressiva(){
+        System.out.println("Contagem Regressiva");
+        for (int numero = 10; numero > -1; numero--)
+            System.out.println(numero);
     }
 }
